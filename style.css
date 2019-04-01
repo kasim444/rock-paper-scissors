@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+:root {
+    --white-color: #fff;
+    --main-color: #24272E;
+    --dark-color: #191a1c;
+    --grey-color: #464647;
+    --dark-grey-color: #25292b;
+    --light-red-color: #E25840;
+    --red-color: #fc121b;
+    --dark-red-color: #d01115;
+    --light-green-color: #4dcc7d;
+    --green-color: #31b43a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+    height: 100vh;
+}
+
+header {
+    background: var(--white-color);
+    padding: 20px;
+}
+
+header>h1 {
+    color: var(--main-color);
+    text-align: center;
+    font-family: Asap, sans-serif;
+}
+
+main {
+    height: calc(100vh - 77px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.score-board {
+    margin: 0 auto 20px auto;
+    border: 3px solid var(--white-color);
+    width: 200px;
+    color: var(--white-color);
+    font-size: 46px;
+    padding: 15px 20px;
+    font-family: Asap, sans-serif;
+    position: relative;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.badge {
+    background: var(--light-red-color);
+    color: var(--white-color);
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: Asap, sans-serif;
+}
+
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -25px;
+}
+
+#computer-label {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.result {
+    font-size: 40px;
+    color: var(--white-color);
+}
+
+.result>p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: var(--dark-color);
+}
+
+.choices .choice {
+    border: 4px solid var(--white-color);
+    border-radius: 50%;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+}
+
+.choices .choice img {
+    width: 88px;
+}
+
+.green-glow {
+    border: 4px solid var(--light-green-color) !important;
+    box-shadow: 0 0 10px var(--green-color);
+}
+
+.red-glow {
+    border: 4px solid var(--red-color) !important;
+    box-shadow: 0 0 10px var(--dark-red-color);
+}
+
+.grey-glow {
+    border: 4px solid var(--grey-color) !important;
+    box-shadow: 0 0 10px var(--dark-grey-color);
+}
+
+#action-message {
+    text-align: center;
+    color: var(--white-color);
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
